@@ -114,7 +114,7 @@ $apiUrl = "https://graph.microsoft.com/beta/teams/$TeamID/channels/"+$channel.id
 $myProfile = Invoke-RestMethod -Headers @{Authorization = "Bearer $accessToken"} -Uri $apiUrl -Method Get
 $ChannelMessages = $myprofile.value | Select-Object Body,From,ID,attachments,createdDateTime | Sort-Object
 $Channeldisplayname = $channel.displayName
-$ChannelMessagesCount = ($ChannelMessages).count
+$ChannelMessagesCount = (($channelmessages.body).content).count
 $Total = $Total + [int]$ChannelMessagesCount
 $TotalTeam = $TotalTeam + [int]$ChannelMessagesCount
 $TotalRoot = $TotalRoot + [int]$ChannelMessagesCount
