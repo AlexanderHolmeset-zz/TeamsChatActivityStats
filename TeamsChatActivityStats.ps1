@@ -71,7 +71,7 @@ $ToCSV = @()
 $Date = get-date
 
 
-#Gets all channels in a Team
+#Gets all groups
 $apiUrl = 'https://graph.microsoft.com/beta/groups?$select=id,resourceProvisioningOptions,DisplayName'
 $myProfile = Invoke-RestMethod -Headers @{Authorization = "Bearer $accessToken"} -Uri $apiUrl -Method Get
 $Teams = $myprofile.value | Select-Object ID,DisplayName,resourceProvisioningOptions
