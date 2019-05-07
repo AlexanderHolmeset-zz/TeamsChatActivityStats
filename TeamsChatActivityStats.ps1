@@ -9,9 +9,6 @@
 
 ### Blog: alexholmeset.blog                     ###
 
-#Description:
-#You specify a Group/team object ID, then the script archives all conversations in every channel for this team in a HTML file.
-#Have in mind information protection policies like GDPR when working on information like this.
 
 
 #Parameters
